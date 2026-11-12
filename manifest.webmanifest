@@ -1,0 +1,14 @@
+{
+  "name": "Cassimiro Circular",
+  "short_name": "Cassimiro",
+  "description": "Projeto da EREFEM Antônio Cassimiro sobre descarte responsável de resíduos eletrônicos em Petrolina.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f6fa",
+  "theme_color": "#071a3b",
+  "icons": [
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

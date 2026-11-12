@@ -1,0 +1,22 @@
+CASSIMIRO CIRCULAR — PACOTE DE PUBLICAÇÃO
+
+Este pacote contém a versão completa e instalável do aplicativo Cassimiro Circular.
+
+Conteúdo:
+- Página principal do aplicativo;
+- Mapa e informações sobre descarte de lixo eletrônico;
+- Manifesto de instalação PWA;
+- Ícones para celular;
+- Service worker para funcionamento offline;
+- Identidade visual e logomarca da escola.
+
+PUBLICAÇÃO
+Envie todos os arquivos deste pacote para a pasta pública do serviço de hospedagem.
+O arquivo index.html deve permanecer na raiz do endereço publicado.
+
+DOMÍNIO RECOMENDADO
+cassimirocircular.com.br
+
+Após a conexão do domínio, o novo endereço deve substituir o link antigo nos QR Codes e materiais impressos.
+
+Projeto TCF 2026 — EREFEM Antônio Cassimiro — Petrolina/PE
