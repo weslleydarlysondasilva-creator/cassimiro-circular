@@ -1,4 +1,4 @@
-const CACHE = 'cassimiro-circular-v4';
+const CACHE = 'cassimiro-circular-v5-map-correction';
 const APP_SHELL = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './icon.svg', './assets/icon-192.png', './assets/icon-512.png', './assets/apple-touch-icon.png', './assets/erefemac-logo.jpeg'];
 
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL))));

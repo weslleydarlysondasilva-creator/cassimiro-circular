@@ -20,3 +20,9 @@ cassimirocircular.com.br
 Após a conexão do domínio, o novo endereço deve substituir o link antigo nos QR Codes e materiais impressos.
 
 Projeto TCF 2026 — EREFEM Antônio Cassimiro — Petrolina/PE
+
+ATUALIZAÇÃO DO MAPA — 12/11/2026
+- Endereços e coordenadas revisados em fontes institucionais.
+- Rotas configuradas pelas mesmas coordenadas utilizadas nos marcadores.
+- Pontos sem localização pública confiável foram removidos.
+- Cache atualizado para substituir automaticamente a versão anterior.

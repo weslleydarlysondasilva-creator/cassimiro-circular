@@ -2,7 +2,7 @@ const points = [
   {
     id: 'cassimiro-facesp',
     name: 'Ecoponto Cassimiro Circular — FACESP',
-    address: 'Rua Matias de Albuquerque, 123 — Gercino Coelho',
+    address: 'Rua Matias de Albuquerque, 123 — Gercino Coelho — CEP 56306-220',
     lat: -9.3905756,
     lng: -40.5114057,
     categories: ['electronics', 'mobile'],
@@ -10,101 +10,79 @@ const points = [
     hours: 'Implantação prevista para outubro de 2026; horários serão divulgados pela escola',
     status: 'Ecoponto escolar em implantação',
     featured: true,
-    source: 'Endereço oficial da FACESP e projeto TCF do 9º Ano B',
+    source: 'FACESP — página oficial de contatos',
     sourceUrl: 'https://facespe.edu.br/contatos/'
   },
   {
     id: 'josepha',
     name: 'Parque Municipal Josepha Coelho',
     address: 'Rua Adelina Santana, 2 — Maria Auxiliadora',
-    lat: -9.3883844,
-    lng: -40.4980859,
+    lat: -9.3873,
+    lng: -40.4996,
     categories: ['electronics', 'mobile', 'batteries'],
     accepts: 'Eletroeletrônicos, celulares, pilhas, baterias, lâmpadas e vidro.',
     hours: 'Todos os dias, 5h às 22h',
     status: 'Ponto público fixo',
-    source: 'MPPE e Prefeitura de Petrolina',
+    source: 'MPPE — relação oficial de PEVs de Petrolina',
     sourceUrl: 'https://portal.mppe.mp.br/w/mppe-e-prefeitura-celebram-inauguracao-de-pontos-de-entrega-voluntaria-para-coleta-de-residuos-solidos'
   },
   {
     id: 'facape',
     name: 'FACAPE — Laboratório RECOM',
-    address: 'Campus Universitário, s/n — Vila Eduardo',
+    address: 'Av. Cardoso de Sá, s/n — Vila Eduardo — CEP 56328-020',
     lat: -9.39416,
     lng: -40.5096,
     categories: ['electronics', 'mobile', 'reuse'],
     accepts: 'Computadores, notebooks, smartphones, HDs, placas, teclados e componentes para triagem e recondicionamento.',
     hours: 'Confirme pelo telefone (87) 3866-3236',
     status: 'Recondicionamento e destinação',
-    source: 'Projeto de extensão da FACAPE',
-    sourceUrl: 'https://facape.otimizeit.com.br/graduacao-pos/graduacao/ciencia-da-computacao/'
+    source: 'MPPE — relação oficial de PEVs de Petrolina',
+    sourceUrl: 'https://portal.mppe.mp.br/w/mppe-e-prefeitura-celebram-inauguracao-de-pontos-de-entrega-voluntaria-para-coleta-de-residuos-solidos'
   },
   {
-    id: 'casas-bahia-centro',
-    name: 'Casas Bahia — Centro',
-    address: 'Rua Dom Vital, 533 — Centro',
-    lat: -9.39575,
-    lng: -40.5043,
-    categories: ['electronics', 'batteries'],
-    accepts: 'Ponto registrado em sistema de logística reversa. Confirme previamente o tipo e o porte do produto.',
+    id: 'magazine-luiza-centro',
+    name: 'Magazine Luiza — Centro',
+    address: 'Av. Souza Filho, 521 — Centro — CEP 56304-000',
+    lat: -9.396263,
+    lng: -40.501988,
+    categories: ['electronics'],
+    accepts: 'Eletroeletrônicos de uso doméstico. Confirme previamente o porte e as condições de entrega.',
     hours: 'Horário comercial da loja',
     status: 'Logística reversa',
-    source: 'Green Eletron / Ambipar',
-    sourceUrl: 'https://greeneletron.org.br/onde-descartar/'
+    source: 'SINIR/ABREE — relação de pontos de recebimento',
+    sourceUrl: 'https://portal-api.sinir.gov.br/wp-content/uploads/2024/04/ANEXO_IV-_PONTOS_DE_RECEBIMENTO_-2022_ABREE.pdf'
   },
   {
     id: 'vivo-river',
     name: 'Vivo — River Shopping',
     address: 'Av. Monsenhor Ângelo Sampaio, 100 — Centro',
-    lat: -9.38692,
-    lng: -40.48865,
+    lat: -9.393838,
+    lng: -40.492655,
     categories: ['mobile', 'batteries'],
     accepts: 'Celulares, carregadores, fones, acessórios de telefonia, pilhas e baterias portáteis.',
     hours: 'Conforme funcionamento do shopping',
     status: 'Telefonia e acessórios',
-    source: 'MPPE / River Shopping',
-    sourceUrl: 'https://www.rivershopping.com.br/lojas/v/vivo/'
+    source: 'SINIR/ABREE — relação de pontos de recebimento',
+    sourceUrl: 'https://portal-api.sinir.gov.br/wp-content/uploads/2024/04/ANEXO_IV-_PONTOS_DE_RECEBIMENTO_-2022_ABREE.pdf'
   },
   {
     id: 'vivo-eco-center',
     name: 'Vivo — Galeria Eco Center',
     address: 'Av. Souza Filho, 516 — Centro',
-    lat: -9.39448,
-    lng: -40.5025,
+    lat: -9.396954,
+    lng: -40.502035,
     categories: ['mobile', 'batteries'],
     accepts: 'Celulares, carregadores, fones, acessórios de telefonia, pilhas e baterias portáteis.',
     hours: 'Confirme com a loja antes da visita',
     status: 'Telefonia e acessórios',
-    source: 'Relação pública de PEVs de Petrolina',
-    sourceUrl: 'https://portal.mppe.mp.br/w/mppe-e-prefeitura-celebram-inauguracao-de-pontos-de-entrega-voluntaria-para-coleta-de-residuos-solidos'
-  },
-  {
-    id: 'assai',
-    name: 'Assaí Petrolina',
-    address: 'Av. Sete de Setembro, s/n — Antônio Cassimiro',
-    lat: -9.3812351,
-    lng: -40.5126744,
-    categories: ['batteries'],
-    accepts: 'Coletor específico para pilhas e baterias portáteis.',
-    hours: 'Conforme funcionamento da loja',
-    status: 'Somente pilhas e baterias',
-    source: 'Assaí Atacadista',
-    sourceUrl: 'https://www.assai.com.br/loja/assai-petrolina'
-  },
-  {
-    id: 'atacadao',
-    name: 'Atacadão Petrolina',
-    address: 'Av. Dr. Ulisses Guimarães, s/n — Jardim Amazonas',
-    lat: -9.38114,
-    lng: -40.53359,
-    categories: ['batteries'],
-    accepts: 'Pilhas, baterias portáteis e materiais indicados no coletor da unidade.',
-    hours: 'Conforme funcionamento da loja',
-    status: 'Coleta específica',
-    source: 'Ambipar / relação de PEVs de Petrolina',
-    sourceUrl: 'https://sistema.gmclog.com.br/info/green?search_state=PE'
+    source: 'SINIR/ABREE — relação de pontos de recebimento',
+    sourceUrl: 'https://portal-api.sinir.gov.br/wp-content/uploads/2024/04/ANEXO_IV-_PONTOS_DE_RECEBIMENTO_-2022_ABREE.pdf'
   }
 ];
+
+function routeUrl(point) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${point.lat},${point.lng}&travelmode=driving`;
+}
 
 const categoryLabels = {
   electronics: 'Eletrônicos',
@@ -139,7 +117,7 @@ if (hasLeaflet) {
   points.forEach(point => {
     const marker = L.marker([point.lat, point.lng], { icon: point.featured ? featuredMarkerIcon : markerIcon })
       .addTo(map)
-      .bindPopup(`<strong>${point.name}</strong><br>${point.address}<br><small>${point.accepts}</small>`);
+      .bindPopup(`<strong>${point.name}</strong><br>${point.address}<br><small>${point.accepts}</small><br><a href="${routeUrl(point)}" target="_blank" rel="noopener">Abrir rota exata</a>`);
     marker.on('click', () => focusCard(point.id));
     markers.set(point.id, marker);
   });
@@ -187,7 +165,7 @@ function render() {
       <p><strong>Recebe:</strong> ${point.accepts}</p>
       <p><strong>Funcionamento:</strong> ${point.hours}</p>
       <div class="card-actions">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(point.address + ', Petrolina, PE')}" target="_blank" rel="noopener"><svg class="icon"><use href="#i-route"></use></svg>Como chegar</a>
+        <a href="${routeUrl(point)}" target="_blank" rel="noopener"><svg class="icon"><use href="#i-route"></use></svg>Como chegar</a>
         ${hasLeaflet ? `<button type="button" data-point="${point.id}"><svg class="icon"><use href="#i-map"></use></svg>Ver no mapa</button>` : ''}
         <a href="${point.sourceUrl}" target="_blank" rel="noopener" title="${point.source}">Fonte ↗</a>
       </div>
