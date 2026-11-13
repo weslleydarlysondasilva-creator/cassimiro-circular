@@ -3,92 +3,98 @@ const points = [
     id: 'cassimiro-facesp',
     name: 'Ecoponto Cassimiro Circular — FACESP',
     address: 'Rua Matias de Albuquerque, 123 — Gercino Coelho — CEP 56306-220',
-    lat: -9.3905756,
-    lng: -40.5114057,
+    lat: -9.390237,
+    lng: -40.511263,
     categories: ['electronics', 'mobile'],
     accepts: 'Cabos e carregadores, periféricos e pequenos equipamentos eletrônicos.',
-    hours: 'Implantação prevista para outubro de 2026; horários serão divulgados pela escola',
-    status: 'Ecoponto escolar em implantação',
+    hours: 'Atendimento conforme organização da escola',
+    status: 'Projeto escolar — confirme antes da entrega',
+    verification: 'Endereço oficial; posição refinada com cadastro eleitoral de 2026',
+    precision: 'building',
     featured: true,
     source: 'FACESP — página oficial de contatos',
-    sourceUrl: 'https://facespe.edu.br/contatos/'
+    sourceUrl: 'https://facespe.edu.br/contatos/',
+    routeQuery: 'FACESP Faculdade de Educação Superior de Pernambuco, Rua Matias de Albuquerque 123, Gercino Coelho, Petrolina PE 56306-220'
   },
   {
     id: 'josepha',
     name: 'Parque Municipal Josepha Coelho',
-    address: 'Rua Adelina Santana, 2 — Maria Auxiliadora',
-    lat: -9.3873,
-    lng: -40.4996,
-    categories: ['electronics', 'mobile', 'batteries'],
+    address: 'Acesso pela Rua Adelina Santana — Maria Auxiliadora',
+    lat: -9.3857722,
+    lng: -40.4993842,
+    categories: ['electronics', 'mobile', 'batteries', 'lamps'],
     accepts: 'Eletroeletrônicos, celulares, pilhas, baterias, lâmpadas e vidro.',
     hours: 'Todos os dias, 5h às 22h',
-    status: 'Ponto público fixo',
+    status: 'Ponto público fixo — coletor dentro do parque',
+    verification: 'Ponto reafirmado como fixo em publicação municipal recente',
+    precision: 'entrance',
     source: 'MPPE — relação oficial de PEVs de Petrolina',
-    sourceUrl: 'https://portal.mppe.mp.br/w/mppe-e-prefeitura-celebram-inauguracao-de-pontos-de-entrega-voluntaria-para-coleta-de-residuos-solidos'
+    sourceUrl: 'https://portal.mppe.mp.br/w/mppe-e-prefeitura-celebram-inauguracao-de-pontos-de-entrega-voluntaria-para-coleta-de-residuos-solidos',
+    routeQuery: 'Parque Municipal Josepha Coelho, Rua Adelina Santana, Petrolina PE'
   },
   {
-    id: 'facape',
-    name: 'FACAPE — Laboratório RECOM',
-    address: 'Av. Cardoso de Sá, s/n — Vila Eduardo — CEP 56328-020',
-    lat: -9.39416,
-    lng: -40.5096,
-    categories: ['electronics', 'mobile', 'reuse'],
-    accepts: 'Computadores, notebooks, smartphones, HDs, placas, teclados e componentes para triagem e recondicionamento.',
-    hours: 'Confirme pelo telefone (87) 3866-3236',
-    status: 'Recondicionamento e destinação',
-    source: 'MPPE — relação oficial de PEVs de Petrolina',
-    sourceUrl: 'https://portal.mppe.mp.br/w/mppe-e-prefeitura-celebram-inauguracao-de-pontos-de-entrega-voluntaria-para-coleta-de-residuos-solidos'
+    id: 'correios-centro',
+    name: 'Correios — AC Petrolina',
+    address: 'Praça Dom Malan, 63 — Centro — CEP 56302-970',
+    lat: -9.398941,
+    lng: -40.5016829,
+    categories: ['electronics', 'mobile'],
+    accepts: 'Celulares, notebooks, tablets, fones, cabos e pequenos eletroeletrônicos em caixa aberta, até 30 kg.',
+    hours: 'Segunda a sexta, 8h às 17h; confirme em feriados',
+    status: 'Serviço nacional dos Correios — disponível desde outubro de 2026',
+    verification: 'Serviço oficial dos Correios e endereço da agência conferido',
+    precision: 'building',
+    source: 'Correios — Sala de Imprensa',
+    sourceUrl: 'https://saladeimprensa.correios.com.br/arquivos/14573',
+    note: 'Não recebe pilhas, baterias ou lâmpadas.'
   },
   {
-    id: 'magazine-luiza-centro',
-    name: 'Magazine Luiza — Centro',
-    address: 'Av. Souza Filho, 521 — Centro — CEP 56304-000',
-    lat: -9.396263,
-    lng: -40.501988,
-    categories: ['electronics'],
-    accepts: 'Eletroeletrônicos de uso doméstico. Confirme previamente o porte e as condições de entrega.',
-    hours: 'Horário comercial da loja',
-    status: 'Logística reversa',
-    source: 'SINIR/ABREE — relação de pontos de recebimento',
-    sourceUrl: 'https://portal-api.sinir.gov.br/wp-content/uploads/2024/04/ANEXO_IV-_PONTOS_DE_RECEBIMENTO_-2022_ABREE.pdf'
+    id: 'assai',
+    name: 'Assaí Atacadista — Petrolina',
+    address: 'Av. Sete de Setembro, s/n — Antônio Cassimiro — CEP 56330-900',
+    lat: -9.3798658,
+    lng: -40.5139508,
+    categories: ['batteries', 'lamps'],
+    accepts: 'Pilhas, baterias portáteis e lâmpadas nos coletores específicos da unidade.',
+    hours: 'Segunda a sábado, 7h às 22h; domingo, 7h às 20h',
+    status: 'Coleta específica da loja',
+    verification: 'Serviços sustentáveis informados na página oficial da unidade',
+    precision: 'building',
+    source: 'Assaí Atacadista — unidade Petrolina',
+    sourceUrl: 'https://www.assai.com.br/loja/assai-petrolina'
   },
   {
-    id: 'vivo-river',
-    name: 'Vivo — River Shopping',
-    address: 'Av. Monsenhor Ângelo Sampaio, 100 — Centro',
-    lat: -9.393838,
-    lng: -40.492655,
-    categories: ['mobile', 'batteries'],
-    accepts: 'Celulares, carregadores, fones, acessórios de telefonia, pilhas e baterias portáteis.',
-    hours: 'Conforme funcionamento do shopping',
-    status: 'Telefonia e acessórios',
-    source: 'SINIR/ABREE — relação de pontos de recebimento',
-    sourceUrl: 'https://portal-api.sinir.gov.br/wp-content/uploads/2024/04/ANEXO_IV-_PONTOS_DE_RECEBIMENTO_-2022_ABREE.pdf'
-  },
-  {
-    id: 'vivo-eco-center',
-    name: 'Vivo — Galeria Eco Center',
-    address: 'Av. Souza Filho, 516 — Centro',
-    lat: -9.396954,
-    lng: -40.502035,
-    categories: ['mobile', 'batteries'],
-    accepts: 'Celulares, carregadores, fones, acessórios de telefonia, pilhas e baterias portáteis.',
-    hours: 'Confirme com a loja antes da visita',
-    status: 'Telefonia e acessórios',
-    source: 'SINIR/ABREE — relação de pontos de recebimento',
-    sourceUrl: 'https://portal-api.sinir.gov.br/wp-content/uploads/2024/04/ANEXO_IV-_PONTOS_DE_RECEBIMENTO_-2022_ABREE.pdf'
+    id: 'atacadao',
+    name: 'Atacadão — Petrolina',
+    address: 'Av. Dr. Ulisses Guimarães, s/n — Jardim Amazonas — CEP 56318-525',
+    lat: -9.3842064,
+    lng: -40.5269931,
+    categories: ['batteries', 'lamps'],
+    accepts: 'Pilhas, baterias portáteis, baterias de eletrônicos e lâmpadas conforme identificação do coletor.',
+    hours: 'Conforme funcionamento da unidade; confirme antes da visita',
+    status: 'Ponto listado em sistema ativo de logística reversa',
+    verification: 'Endereço no localizador atual da Green Eletron/Ambipar',
+    precision: 'building',
+    source: 'Green Eletron / Ambipar — localizador de PEVs',
+    sourceUrl: 'https://sistema.gmclog.com.br/info/green?search_state=PE'
   }
 ];
 
 function routeUrl(point) {
+  if (point.routeQuery) return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(point.routeQuery)}`;
   return `https://www.google.com/maps/dir/?api=1&destination=${point.lat},${point.lng}&travelmode=driving`;
+}
+
+function appleMapsUrl(point) {
+  const destination = point.routeQuery || `${point.lat},${point.lng}`;
+  return `https://maps.apple.com/?q=${encodeURIComponent(point.name)}&daddr=${encodeURIComponent(destination)}`;
 }
 
 const categoryLabels = {
   electronics: 'Eletrônicos',
   mobile: 'Celulares e acessórios',
   batteries: 'Pilhas e baterias',
-  reuse: 'Recondicionamento'
+  lamps: 'Lâmpadas'
 };
 
 let activeFilter = 'all';
@@ -102,10 +108,11 @@ const locationMessage = document.querySelector('#locationMessage');
 const installButton = document.querySelector('#installButton');
 const hasLeaflet = typeof window.L !== 'undefined';
 let map = null;
+let mapBounds = null;
 const markers = new Map();
 
 if (hasLeaflet) {
-  map = L.map('map', { zoomControl: false }).setView([-9.3915, -40.5050], 13);
+  map = L.map('map', { zoomControl: false }).setView([-9.3905, -40.5090], 13);
   L.control.zoom({ position: 'bottomright' }).addTo(map);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -117,10 +124,12 @@ if (hasLeaflet) {
   points.forEach(point => {
     const marker = L.marker([point.lat, point.lng], { icon: point.featured ? featuredMarkerIcon : markerIcon })
       .addTo(map)
-      .bindPopup(`<strong>${point.name}</strong><br>${point.address}<br><small>${point.accepts}</small><br><a href="${routeUrl(point)}" target="_blank" rel="noopener">Abrir rota exata</a>`);
+      .bindPopup(`<strong>${point.name}</strong><br>${point.address}<br><small>${point.status}</small><br><a href="${routeUrl(point)}" target="_blank" rel="noopener">Abrir localização</a>`);
     marker.on('click', () => focusCard(point.id));
     markers.set(point.id, marker);
   });
+  mapBounds = L.latLngBounds(points.map(point => [point.lat, point.lng]));
+  map.fitBounds(mapBounds.pad(0.16), { maxZoom: 14 });
 } else {
   document.querySelector('#map').innerHTML = '<div class="map-fallback"><strong>O mapa não pôde ser carregado.</strong><span>A lista de locais continua disponível. Use “Como chegar” para abrir a rota.</span></div>';
 }
@@ -161,11 +170,14 @@ function render() {
         ${point.distance !== null ? `<span class="distance">${point.distance.toFixed(1)} km</span>` : ''}
       </div>
       ${point.featured ? '<span class="school-badge">Nosso ecoponto</span>' : ''}
+      <span class="verification-badge">✓ ${point.verification}</span>
       <div class="tags">${point.categories.map(cat => `<span class="tag">${categoryLabels[cat]}</span>`).join('')}</div>
       <p><strong>Recebe:</strong> ${point.accepts}</p>
       <p><strong>Funcionamento:</strong> ${point.hours}</p>
+      ${point.note ? `<p class="point-note"><strong>Atenção:</strong> ${point.note}</p>` : ''}
       <div class="card-actions">
-        <a href="${routeUrl(point)}" target="_blank" rel="noopener"><svg class="icon"><use href="#i-route"></use></svg>Como chegar</a>
+        <a href="${routeUrl(point)}" target="_blank" rel="noopener"><svg class="icon"><use href="#i-route"></use></svg>Google Maps</a>
+        <a href="${appleMapsUrl(point)}" target="_blank" rel="noopener"><svg class="icon"><use href="#i-route"></use></svg>Mapas no iPhone</a>
         ${hasLeaflet ? `<button type="button" data-point="${point.id}"><svg class="icon"><use href="#i-map"></use></svg>Ver no mapa</button>` : ''}
         <a href="${point.sourceUrl}" target="_blank" rel="noopener" title="${point.source}">Fonte ↗</a>
       </div>
@@ -276,7 +288,10 @@ function setRoute(route, updateHash = true) {
   if (updateHash && location.hash !== `#${nextRoute}`) history.pushState(null, '', `#${nextRoute}`);
   document.querySelector('.app-stage')?.scrollTo({ top: 0, behavior: 'auto' });
   window.scrollTo({ top: 0, behavior: 'auto' });
-  if (nextRoute === 'mapa' && hasLeaflet) requestAnimationFrame(() => map.invalidateSize());
+  if (nextRoute === 'mapa' && hasLeaflet) requestAnimationFrame(() => {
+    map.invalidateSize();
+    if (mapBounds) map.fitBounds(mapBounds.pad(0.16), { maxZoom: 14 });
+  });
 }
 
 navLinks.forEach(link => link.addEventListener('click', event => {

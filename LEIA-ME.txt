@@ -21,8 +21,11 @@ Após a conexão do domínio, o novo endereço deve substituir o link antigo nos
 
 Projeto TCF 2026 — EREFEM Antônio Cassimiro — Petrolina/PE
 
-ATUALIZAÇÃO DO MAPA — 12/11/2026
-- Endereços e coordenadas revisados em fontes institucionais.
-- Rotas configuradas pelas mesmas coordenadas utilizadas nos marcadores.
-- Pontos sem localização pública confiável foram removidos.
+RECONSTRUÇÃO DO MAPA — 12/11/2026
+- O mapa agora apresenta cinco locais revisados: FACESP, Parque Josepha Coelho,
+  Correios AC Petrolina, Assaí Petrolina e Atacadão Petrolina.
+- Endereços e coordenadas foram conferidos em fontes institucionais e cartográficas.
+- Os botões abrem Google Maps ou Mapas no iPhone; cada cartão exibe sua fonte.
+- Marcadores indicam o edifício ou acesso ao local, pois o coletor pode ficar dentro dele.
+- Pontos antigos sem confirmação atual suficiente foram retirados do mapa.
 - Cache atualizado para substituir automaticamente a versão anterior.
