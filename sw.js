@@ -1,5 +1,5 @@
-const CACHE = 'cassimiro-circular-v6-map-rebuilt-2';
-const APP_SHELL = ['./', './index.html', './styles.css?v=6.2', './app.js?v=6.2', './manifest.webmanifest', './icon.svg', './assets/icon-192.png', './assets/icon-512.png', './assets/apple-touch-icon.png', './assets/erefemac-logo.jpeg'];
+const CACHE = 'cassimiro-circular-v9-cassi-explica';
+const APP_SHELL = ['./', './index.html', './styles.css?v=9.0', './app.js?v=9.0', './manifest.webmanifest', './icon.svg', './assets/icon-192.png', './assets/icon-512.png', './assets/apple-touch-icon.png', './assets/erefemac-logo.jpeg', './assets/cassi-mascote.webp'];
 
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL))));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))));

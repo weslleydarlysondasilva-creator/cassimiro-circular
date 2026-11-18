@@ -21,11 +21,27 @@ Após a conexão do domínio, o novo endereço deve substituir o link antigo nos
 
 Projeto TCF 2026 — EREFEM Antônio Cassimiro — Petrolina/PE
 
-RECONSTRUÇÃO DO MAPA — 12/11/2026
-- O mapa agora apresenta cinco locais revisados: FACESP, Parque Josepha Coelho,
-  Correios AC Petrolina, Assaí Petrolina e Atacadão Petrolina.
-- Endereços e coordenadas foram conferidos em fontes institucionais e cartográficas.
-- Os botões abrem Google Maps ou Mapas no iPhone; cada cartão exibe sua fonte.
-- Marcadores indicam o edifício ou acesso ao local, pois o coletor pode ficar dentro dele.
-- Pontos antigos sem confirmação atual suficiente foram retirados do mapa.
+AUDITORIA TERRITORIAL DO MAPA — 17/11/2026
+- O mapa apresenta sete locais pesquisados: FACESP, Parque Josepha Coelho,
+  Correios AC Petrolina, Assaí Petrolina, Atacadão Petrolina, River Shopping e FACAPE.
+- A FACAPE foi corrigida para o ponto exato do Campus Universitário, na Vila Eduardo
+  (coordenadas verificadas no marcador público do Google Maps em 17/11/2026).
+- O River Shopping foi reinserido após confirmação na página oficial de serviços.
+- Rotas usam o nome completo e o endereço institucional, evitando destinos genéricos.
+- Cada cartão informa materiais, data da confirmação, fonte e necessidade de contato prévio.
+- Registros mais antigos são apresentados com selo amarelo de confirmação obrigatória.
 - Cache atualizado para substituir automaticamente a versão anterior.
+
+CONTADOR DE IMPACTO — VERSÃO 8.0
+- A tela inicial apresenta uma faixa de impacto digital com o total público de visitas.
+- Cada navegador registra apenas uma nova visita, evitando somar novamente a cada atualização.
+- O total permanece salvo externamente e continua sendo exibido quando o aplicativo é fechado.
+- Se o serviço estiver temporariamente indisponível, o último total conhecido é mostrado.
+
+CASSI EXPLICA — VERSÃO 9.0
+- A aba Aprenda foi totalmente redesenhada com o mascote Cassi integrado ao conteúdo.
+- A imagem do mascote foi otimizada em WebP para manter alta qualidade com carregamento rápido.
+- Quatro guias interativos ensinam preparação, privacidade, segurança e uso do ecoponto.
+- A área reúne seis perguntas frequentes e um quiz de mito ou verdade com explicações.
+- Navegação por teclado, estados de foco, modo escuro e layout responsivo foram preservados.
+- O mapa auditado, os endereços revisados e o contador de visitas continuam incluídos.

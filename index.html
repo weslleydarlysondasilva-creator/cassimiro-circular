@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-  <link rel="stylesheet" href="./styles.css?v=6.2">
+  <link rel="stylesheet" href="./styles.css?v=9.0">
 </head>
 <body>
   <svg class="svg-sprite" aria-hidden="true">
@@ -46,7 +46,7 @@
       </a>
       <nav class="side-nav" aria-label="Áreas do aplicativo">
         <a href="#inicio" data-route="inicio"><svg><use href="#i-home"></use></svg><span>Início</span></a>
-        <a href="#mapa" data-route="mapa"><svg><use href="#i-map"></use></svg><span>Mapa</span><b>5</b></a>
+        <a href="#mapa" data-route="mapa"><svg><use href="#i-map"></use></svg><span>Mapa</span><b>7</b></a>
         <a href="#ecoponto" data-route="ecoponto"><svg><use href="#i-recycle"></use></svg><span>Ecoponto</span></a>
         <a href="#aprenda" data-route="aprenda"><svg><use href="#i-learn"></use></svg><span>Aprenda</span></a>
         <a href="#sobre" data-route="sobre"><svg><use href="#i-users"></use></svg><span>Sobre nós</span></a>
@@ -57,7 +57,7 @@
 
     <div class="app-stage">
       <header class="topbar">
-        <div><span class="live-dot"></span><strong>Projeto em desenvolvimento</strong><small>Mapa reconstruído em 12 de novembro de 2026</small></div>
+        <div><span class="live-dot"></span><strong>Projeto em desenvolvimento</strong><small>Mapa auditado em 17 de novembro de 2026</small></div>
         <div class="top-actions">
           <button id="shareButton" class="icon-button" aria-label="Compartilhar aplicativo"><svg><use href="#i-share"></use></svg></button>
           <button id="themeToggle" class="icon-button" aria-label="Alternar tema"><svg class="moon-icon"><use href="#i-moon"></use></svg><svg class="sun-icon"><use href="#i-sun"></use></svg></button>
@@ -85,6 +85,16 @@
             </div>
           </div>
 
+          <aside class="visitor-pulse" aria-labelledby="visitorPulseTitle">
+            <span class="visitor-orbit" aria-hidden="true"><i></i><svg><use href="#i-users"></use></svg></span>
+            <div class="visitor-copy">
+              <span class="visitor-eyebrow" id="visitorPulseTitle">IMPACTO DIGITAL</span>
+              <div class="visitor-total"><strong id="visitorCount" aria-live="polite">—</strong><span>pessoas já visitaram<br>nosso app</span></div>
+            </div>
+            <p>Cada visita fortalece uma rede mais consciente para o descarte eletrônico em Petrolina.</p>
+            <span class="visitor-status"><i></i><span id="visitorStatus">Carregando contagem pública…</span></span>
+          </aside>
+
           <div class="dashboard-grid">
             <article class="featured-place">
               <div class="card-top"><span class="card-icon"><svg><use href="#i-school"></use></svg></span><span class="status-pill"><i></i> Em implantação</span></div>
@@ -92,7 +102,7 @@
               <div class="address-row"><svg><use href="#i-location"></use></svg><span>Rua Matias de Albuquerque, 123<br>Gercino Coelho · Petrolina–PE</span></div>
               <button data-route="mapa" class="card-link">Ver no mapa <svg><use href="#i-arrow"></use></svg></button>
             </article>
-            <div class="metric-stack"><article><strong>5</strong><span>pontos revisados<br>em Petrolina</span></article><article><strong>3</strong><span>categorias no<br>ecoponto escolar</span></article></div>
+            <div class="metric-stack"><article><strong>7</strong><span>pontos pesquisados<br>em Petrolina</span></article><article><strong>4</strong><span>categorias de<br>materiais no mapa</span></article></div>
             <article class="quick-learn"><span class="card-icon yellow"><svg><use href="#i-learn"></use></svg></span><small>APRENDA EM 1 MINUTO</small><h3>O que fazer antes de descartar?</h3><ol><li>Separe o equipamento</li><li>Proteja seus dados</li><li>Não desmonte</li><li>Confirme o ponto</li></ol><button data-route="aprenda" class="card-link">Abrir guia <svg><use href="#i-arrow"></use></svg></button></article>
             <article class="impact-card"><div class="impact-number">62<small>mi</small></div><p>de toneladas de resíduos eletrônicos foram geradas no mundo em 2022.</p><a href="https://unitar.org/about/news-stories/press/global-e-waste-monitor-2024-electronic-waste-rising-five-times-faster-documented-e-waste-recycling" target="_blank" rel="noopener">Fonte: Global E-waste Monitor ↗</a></article>
           </div>
@@ -104,10 +114,11 @@
             <label class="search-box"><svg><use href="#i-search"></use></svg><input id="searchInput" type="search" placeholder="Buscar local, bairro ou material" aria-label="Buscar ponto de coleta"></label>
             <div class="filters" role="group" aria-label="Filtrar pontos por categoria"><button class="filter active" data-filter="all">Todos</button><button class="filter" data-filter="electronics">Eletrônicos</button><button class="filter" data-filter="mobile">Celulares</button><button class="filter" data-filter="batteries">Pilhas</button><button class="filter" data-filter="lamps">Lâmpadas</button></div>
           </div>
-          <div class="map-legend"><span><i class="legend-dot confirmed"></i> Confirmado ou atualizado em 2026</span><span><i class="legend-dot public"></i> Ponto público fixo</span><span><i class="legend-dot school"></i> Projeto escolar</span></div>
+          <div class="map-legend"><span><i class="legend-dot verified"></i> Confirmação atual</span><span><i class="legend-dot recent"></i> Ponto público confirmado em 2025</span><span><i class="legend-dot confirm"></i> Registro anterior: confirme</span><span><i class="legend-dot project"></i> Projeto escolar</span></div>
+          <div class="audit-banner"><span>MAPA AUDITADO</span><p>Rotas abertas pelo nome completo e pelo endereço institucional, evitando direcionamentos para coordenadas genéricas.</p></div>
           <div id="locationMessage" class="location-message" hidden></div>
-          <div class="map-workspace"><div id="map" aria-label="Mapa interativo com pontos de coleta em Petrolina"></div><aside class="results-pane"><div class="results-head"><strong>5 locais revisados</strong><small>Auditoria completa · nov/2026</small></div><div id="results" class="results" aria-live="polite"></div></aside></div>
-          <div class="safe-note"><svg><use href="#i-alert"></use></svg><p><strong>Como interpretar:</strong> o marcador indica o acesso ou edifício do estabelecimento. O coletor pode ficar em uma área interna. Confirme o material aceito antes da visita.</p></div>
+          <div class="map-workspace"><div id="map" aria-label="Mapa interativo com pontos de coleta em Petrolina"></div><aside class="results-pane"><div class="results-head"><strong>7 locais pesquisados</strong><small>Revisão territorial · nov/2026</small></div><div id="results" class="results" aria-live="polite"></div></aside></div>
+          <div class="safe-note"><svg><use href="#i-alert"></use></svg><p><strong>Como interpretar:</strong> o marcador indica o edifício, campus ou acesso ao estabelecimento. O coletor pode ficar em uma área interna. Pontos com selo amarelo possuem registro institucional anterior e devem ser confirmados por telefone.</p></div>
         </section>
 
         <section id="ecoponto" class="view" data-view="ecoponto" hidden>
@@ -127,17 +138,71 @@
         </section>
 
         <section id="aprenda" class="view" data-view="aprenda" hidden>
-          <div class="view-header"><div><span class="mini-label">CONHECIMENTO EM CIRCULAÇÃO</span><h1>Entenda antes de descartar.</h1><p>Informação prática para proteger seus dados, sua saúde e o meio ambiente.</p></div></div>
-          <div class="learning-grid">
-            <article class="guide-card"><span class="guide-step">01</span><span class="learn-icon"><svg><use href="#i-guide"></use></svg></span><h2>Separe</h2><p>Não misture eletrônicos com resíduos domésticos, alimentos, vidro ou entulho.</p></article>
-            <article class="guide-card"><span class="guide-step">02</span><span class="learn-icon cyan"><svg><use href="#i-phone"></use></svg></span><h2>Proteja seus dados</h2><p>Faça backup, restaure o aparelho e retire chips e cartões de memória.</p></article>
-            <article class="guide-card"><span class="guide-step">03</span><span class="learn-icon yellow"><svg><use href="#i-alert"></use></svg></span><h2>Não desmonte</h2><p>Abrir ou quebrar equipamentos pode expor componentes perigosos.</p></article>
-            <article class="guide-card"><span class="guide-step">04</span><span class="learn-icon green"><svg><use href="#i-location"></use></svg></span><h2>Confirme o ponto</h2><p>Verifique se o local recebe o tipo e o tamanho do item que você pretende levar.</p></article>
+          <div class="cassi-hero">
+            <div class="cassi-hero-copy">
+              <span class="mini-label">CONHECIMENTO EM CIRCULAÇÃO</span>
+              <h1>Cassi <em>Explica.</em></h1>
+              <p>Informação prática e interativa para proteger seus dados, evitar riscos e escolher o destino certo para cada eletrônico.</p>
+              <div class="cassi-hero-actions"><button id="startLearning" type="button">Começar agora <svg><use href="#i-arrow"></use></svg></button><span><i></i> 4 guias rápidos · quiz · perguntas</span></div>
+            </div>
+            <div class="cassi-stage" aria-label="Cassi, mascote do Cassimiro Circular">
+              <span class="cassi-halo" aria-hidden="true"></span>
+              <img src="./assets/cassi-mascote.webp" alt="Cassi, robô feito com componentes eletrônicos reaproveitados" width="760" height="808">
+              <div class="cassi-welcome"><small>OLÁ!</small><strong>Vamos fazer o descarte certo?</strong></div>
+            </div>
           </div>
-          <div class="topic-layout">
-            <article class="topic-intro"><span>GUIA ESSENCIAL</span><h2>Lixo eletrônico não é lixo comum.</h2><p>Um equipamento pode ser consertado, doado, recondicionado ou reciclado. O descarte deve ser sempre a última etapa de uma decisão consciente.</p><div class="material-chips"><span><svg><use href="#i-phone"></use></svg>Celulares</span><span><svg><use href="#i-laptop"></use></svg>Computadores</span><span><svg><use href="#i-cable"></use></svg>Cabos</span><span><svg><use href="#i-battery"></use></svg>Baterias</span></div></article>
-            <div class="topic-list"><details open><summary>O que é lixo eletrônico?<span>+</span></summary><p>É todo equipamento elétrico ou eletrônico descartado, incluindo peças, cabos, carregadores e acessórios.</p></details><details><summary>O que é logística reversa?<span>+</span></summary><p>É o retorno do produto após o uso para coleta, triagem, reaproveitamento, reciclagem e destinação adequada.</p></details><details><summary>Reutilizar ou reciclar?<span>+</span></summary><p>Se o aparelho ainda funciona ou pode ser recuperado, reutilizar prolonga sua vida útil. A reciclagem vem quando a recuperação não é viável.</p></details><details><summary>E se a bateria estiver estufada?<span>+</span></summary><p>Não perfure, aperte ou coloque no coletor comum. Afaste de calor e procure um ponto que receba baterias danificadas.</p></details></div>
+
+          <div class="learn-section-head" id="learnTopics"><div><span>01 · GUIAS RÁPIDOS</span><h2>O que você quer aprender?</h2></div><p>Escolha um tema. O conteúdo muda sem sair da página.</p></div>
+          <div class="lesson-tabs" role="tablist" aria-label="Guias educativos">
+            <button class="lesson-tab active" type="button" role="tab" aria-selected="true" aria-controls="lessonPanel" data-lesson="preparar"><span><svg><use href="#i-guide"></use></svg></span><small>ANTES DE DESCARTAR</small><strong>Prepare o aparelho</strong></button>
+            <button class="lesson-tab" type="button" role="tab" aria-selected="false" aria-controls="lessonPanel" data-lesson="dados"><span><svg><use href="#i-phone"></use></svg></span><small>PRIVACIDADE</small><strong>Proteja seus dados</strong></button>
+            <button class="lesson-tab" type="button" role="tab" aria-selected="false" aria-controls="lessonPanel" data-lesson="baterias"><span><svg><use href="#i-battery"></use></svg></span><small>SEGURANÇA</small><strong>Pilhas e baterias</strong></button>
+            <button class="lesson-tab" type="button" role="tab" aria-selected="false" aria-controls="lessonPanel" data-lesson="ecoponto"><span><svg><use href="#i-recycle"></use></svg></span><small>NOSSO PROJETO</small><strong>O que recebemos</strong></button>
           </div>
+
+          <div class="lesson-workspace">
+            <article class="lesson-panel" id="lessonPanel" role="tabpanel" aria-live="polite">
+              <div class="lesson-heading"><span class="lesson-number" id="lessonNumber">01</span><div><small id="lessonEyebrow">ANTES DE DESCARTAR</small><h2 id="lessonTitle">Prepare o aparelho</h2><p id="lessonIntro">Alguns cuidados simples tornam a entrega mais segura e facilitam a triagem.</p></div></div>
+              <ol class="lesson-checklist" id="lessonChecklist"></ol>
+              <div class="lesson-note"><svg><use href="#i-check"></use></svg><p id="lessonNote"></p></div>
+            </article>
+            <aside class="cassi-tip-card">
+              <div class="cassi-mini"><img src="./assets/cassi-mascote.webp" alt="" width="760" height="808"></div>
+              <span>CASSI DIZ</span><p id="cassiTip">Se o equipamento ainda funciona, consertar ou doar pode ser melhor do que reciclar.</p>
+              <div class="lesson-progress"><span id="lessonProgress">Guia 1 de 4</span><i><b id="lessonProgressBar"></b></i></div>
+            </aside>
+          </div>
+
+          <section class="cassi-faq" aria-labelledby="faqTitle">
+            <div class="learn-section-head"><div><span>02 · PERGUNTAS FREQUENTES</span><h2 id="faqTitle">Pergunte ao Cassi.</h2></div><p>Respostas curtas para as dúvidas que mais aparecem.</p></div>
+            <div class="faq-layout">
+              <aside class="faq-cassi-card"><img src="./assets/cassi-mascote.webp" alt="Cassi respondendo perguntas sobre lixo eletrônico" width="760" height="808"><div><small>POSSO AJUDAR?</small><strong>Toque em uma pergunta para ver a resposta.</strong></div></aside>
+              <div class="cassi-faq-list">
+                <details open><summary>O que é lixo eletrônico?<span>+</span></summary><p>É todo equipamento elétrico ou eletrônico descartado, incluindo aparelhos, peças, cabos, carregadores e acessórios.</p></details>
+                <details><summary>Posso jogar um aparelho quebrado no lixo comum?<span>+</span></summary><p>Não. Mesmo quebrado, ele pode conter materiais reaproveitáveis e componentes que precisam de destinação adequada.</p></details>
+                <details><summary>O ecoponto escolar recebe televisores?<span>+</span></summary><p>Não. O Cassimiro Circular foi planejado para cabos, carregadores, periféricos e pequenos eletrônicos. Consulte o mapa para itens maiores.</p></details>
+                <details><summary>Posso colocar uma bateria estufada no coletor?<span>+</span></summary><p>Não. Não perfure, aperte ou exponha ao calor. Procure orientação de um ponto especializado antes de transportar.</p></details>
+                <details><summary>Celular quebrado ainda precisa ter os dados apagados?<span>+</span></summary><p>Sim, sempre que for possível. Retire chips e cartões de memória. Se o aparelho não ligar, avise o responsável pelo recebimento.</p></details>
+                <details><summary>É melhor reutilizar ou reciclar?<span>+</span></summary><p>Se o equipamento ainda funciona ou pode ser recuperado, reparar, doar ou reutilizar prolonga sua vida útil. A reciclagem vem depois.</p></details>
+              </div>
+            </div>
+          </section>
+
+          <section class="cassi-quiz" aria-labelledby="quizTitle">
+            <div class="quiz-intro"><span>03 · MITO OU VERDADE</span><h2 id="quizTitle">Teste o que aprendeu.</h2><p>Quatro perguntas rápidas. O Cassi explica cada resposta.</p></div>
+            <div class="quiz-board">
+              <div class="quiz-main">
+                <div class="quiz-meta"><span id="quizCounter">Pergunta 1 de 4</span><i><b id="quizBar"></b></i></div>
+                <h3 id="quizQuestion">Se um celular não liga, ele pode ser jogado no lixo comum.</h3>
+                <div class="quiz-options" role="group" aria-label="Escolha mito ou verdade"><button type="button" data-quiz-answer="false">Mito</button><button type="button" data-quiz-answer="true">Verdade</button></div>
+                <div class="quiz-feedback" id="quizFeedback" aria-live="polite" hidden></div>
+                <button class="quiz-next" id="quizNext" type="button" hidden>Próxima pergunta <svg><use href="#i-arrow"></use></svg></button>
+              </div>
+              <aside class="quiz-score"><span>SEU RESULTADO</span><strong id="quizScore">0</strong><small>acertos</small><div class="score-orbit"><svg><use href="#i-recycle"></use></svg></div></aside>
+            </div>
+          </section>
+
+          <div class="battery-alert"><span><svg><use href="#i-alert"></use></svg></span><div><small>ALERTA DO CASSI</small><strong>Bateria estufada exige cuidado especial.</strong><p>Não perfure, pressione, desmonte ou coloque no ecoponto escolar. Confirme antes um local que receba baterias danificadas.</p></div><button type="button" data-route="mapa">Ver pontos no mapa <svg><use href="#i-route"></use></svg></button></div>
         </section>
 
         <section id="sobre" class="view" data-view="sobre" hidden>
@@ -167,7 +232,7 @@
             </article>
             <article class="mission-card"><span>02</span><small>NOSSA MISSÃO</small><h2>Transformar informação em atitude.</h2><p>Conectar escola e comunidade para reduzir o descarte inadequado e ampliar a responsabilidade ambiental.</p></article>
           </div>
-          <div class="sources"><div><strong>Fontes e transparência</strong><p>O mapa foi reconstruído em novembro de 2026. Pontos antigos sem confirmação atual foram retirados.</p></div><div><a href="https://saladeimprensa.correios.com.br/arquivos/14573" target="_blank" rel="noopener">Correios ↗</a><a href="https://portal.mppe.mp.br/w/mppe-e-prefeitura-celebram-inauguracao-de-pontos-de-entrega-voluntaria-para-coleta-de-residuos-solidos" target="_blank" rel="noopener">MPPE ↗</a><a href="https://sistema.gmclog.com.br/info/green?search_state=PE" target="_blank" rel="noopener">Green Eletron ↗</a><a href="https://facespe.edu.br/contatos/" target="_blank" rel="noopener">FACESP ↗</a></div></div>
+          <div class="sources"><div><strong>Fontes e transparência</strong><p>Endereços, rotas, materiais e datas de confirmação foram revistos em novembro de 2026. A FACAPE foi reposicionada no ponto exato do Campus Universitário da Vila Eduardo e o River Shopping foi reinserido após confirmação no site oficial.</p></div><div><a href="https://saladeimprensa.correios.com.br/arquivos/14573" target="_blank" rel="noopener">Correios ↗</a><a href="https://portal.mppe.mp.br/w/mppe-e-prefeitura-celebram-inauguracao-de-pontos-de-entrega-voluntaria-para-coleta-de-residuos-solidos" target="_blank" rel="noopener">MPPE ↗</a><a href="https://sistema.gmclog.com.br/info/green?search_state=PE" target="_blank" rel="noopener">Green Eletron ↗</a><a href="https://www.rivershopping.com.br/o-shopping/servi%C3%A7os/" target="_blank" rel="noopener">River Shopping ↗</a><a href="https://facespe.edu.br/contatos/" target="_blank" rel="noopener">FACESP ↗</a></div></div>
         </section>
       </main>
     </div>
@@ -184,6 +249,6 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <noscript>Ative o JavaScript para visualizar o mapa e navegar pelo aplicativo.</noscript>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="./app.js?v=6.2"></script>
+  <script src="./app.js?v=9.0"></script>
 </body>
 </html>
